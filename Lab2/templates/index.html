@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>赵康明的主页</title>
+    <style>
+        body {
+            background-image: url('/static/cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        h1, p {
+            text-align: center; /* 将文本居中对齐 */
+            font-family: "楷体"; /* 设置字体为楷体 */
+            color: white; /* 设置文字颜色为白色 */
+            font-size: 40px; /* 调整字体大小 */
+        }
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px; /* 调整Logo的宽度 */
+        }
+        #playButton {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="/static/logo.png" alt="Logo">
+    <p>学号: 2110937</p>
+    <p>姓名: 赵康明</p>
+    <p>专业: 计算机科学与技术</p>
+    
+    <!-- 添加JavaScript代码来播放音乐 -->
+    <audio id="music" src="/static/bgm.mp3"></audio>
+    <button id="playButton">播放音乐</button>
+
+    <script>
+        var music = document.getElementById("music");
+        var playButton = document.getElementById("playButton");
+        var isPlaying = false;
+
+        playButton.addEventListener("click", function() {
+            if (isPlaying) {
+                music.pause();
+                playButton.textContent = "播放音乐";
+            } else {
+                music.play();
+                playButton.textContent = "暂停音乐";
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>
