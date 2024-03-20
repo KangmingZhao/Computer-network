@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.y": "yacc",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "new": "cpp",
+        "system_error": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp"
+    }
+}
